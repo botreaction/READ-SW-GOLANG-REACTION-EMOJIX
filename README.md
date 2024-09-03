@@ -6,41 +6,51 @@ Beberapa Versi Auto Read SW
 - [(Golang)](https://github.com/Onichaa/readsw)<br>
 ___
 <p align="center">
-  <img src="https://pomf2.lain.la/f/yxp1y9hx.jpg" alt="contoh1">
+  <img src="https://pomf2.lain.la/f/jh47lpe3.jpg" alt="contoh1">
 </p>
 
 ___
 ### PANEL
 
-- Pastikan panel yang kamu beli support golang versi 1.23
 - Jalankan command dibawah ini di terminal 
 
 
 ```
-$ git clone https://github.com/Onichaa/readsw
+$ git clone --single-branch --branch js https://github.com/Onichaa/readsw.git
 $ cd readsw
-$ go mod init readsw
-$ go mod tidy
-$ go run main.go
+$ npm i
+$ npm start
 ```
 
 ___
-### LINUX/VPS
+### VPS
 
-- [Install package golang untuk linux/vps](https://go.dev/doc/install)
+- Jalankan command dibawah ini di terminal 
 
-kalo udah install package golang di vpsnya jalankan command di bawah ini di terminal
 
 ```
-$ git clone https://github.com/Onichaa/readsw
+$ git clone --single-branch --branch js https://github.com/Onichaa/readsw.git
 $ cd readsw
-$ go mod init readsw
-$ go mod tidy
-$ go run main.go
+$ npm i
+$ npm start
 ```
 
 ___
-Jika ingin run ulang ketik aja langsung
+### NOTE
+
+- Login memakai pairing code
 ```
-$ go run main.go
+$ node index.js --pairing-code
+```
+
+- Login memakai QR
+```
+$ node index.js atau bisa juga npm start
+```
+
+- Agar 24 jam di VPS/LINUX
+  
+```
+$ cd readsw
+$ pm2 start index.js --attach
 ```

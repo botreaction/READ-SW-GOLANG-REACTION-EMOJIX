@@ -1,7 +1,4 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
-name: Go
+name: Node.js CI
 
 on:
   push:
@@ -17,20 +14,17 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        go-version: '1.20'
+       node-version: '18'
 
     #- name: Install dependencies
       #run: npm install -g pm2
          
     - name: Install Module
-      run: go mod init readsw && go mod tidy
+      run: npm i
         
     - name: Test
-      #run: go run main.go
-      run: go test -v ./...
-      #run: pm2 start 'go run main.go' --attach
-      #pm2 start "go run ." --watch ".go" --watch "/.go" --watch "//.go" && pm2 log ./...
-      
+      run: npm test -v ./...
+      #run: pm2 start index.js --attach
