@@ -1,13 +1,13 @@
 {
   "name": "ReadSW",
   "version": "1.0.0",
-  "description": "Auto Read Story WhatsApp Using Lib Baileys Multi Device",
+  "description": "Auto Read Story Wily",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "takim",
+  "author": "Wily",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
